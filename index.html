@@ -10,22 +10,37 @@
     <!-- navbar -->
     <nav class="nav">
       <ul class="sidebar">
+        <li onclick=hideSidebar()>
+          <img
+            src="images/menu-bar.png"
+            alt="menu-icon"
+            height="35"
+            width="35"
+          />
         <li>Home</li>
         <li>Order</li>
         <li>Food</li>
         <li>Restaurant</li>
         <li>Testimonials</li>
         <li>Contact Us</li>
-        <li><img src="images/menu-bar.png" alt="menu-icon" height="25" width="30"/></li>
+        
+        </li>
       </ul>
       <ul>
-        <li>Home</li>
-        <li>Order</li>
-        <li>Food</li>
-        <li>Restaurant</li>
-        <li>Testimonials</li>
-        <li>Contact Us</li>
-        <li><img src="images/menu-bar.png" alt="menu-icon" height="25" width="30"/></li>
+        <li class="hideOnMobile">Home</li>
+        <li class="hideOnMobile">Order</li>
+        <li class="hideOnMobile">Food</li>
+        <li class="hideOnMobile">Restaurant</li>
+        <li class="hideOnMobile">Testimonials</li>
+        <li class="hideOnMobile">Contact Us</li>
+        <li onclick="showSidebar()">
+          <img
+            src="images/menu-bar.png"
+            alt="menu-icon"
+            height="25"
+            width="30"
+          />
+        </li>
       </ul>
     </nav>
 
@@ -57,7 +72,7 @@
           <div class="img-container">
             <div class="col-01">
               <img src="images/pexels-rachel-claire-6752433.jpg" alt="img-01" />
-              <img src="images/pexels-eva-bronzini-6141651.jpg" alt="img-02" />
+              <img class="img-outdoor" src="images/pexels-eva-bronzini-6141651.jpg" alt="img-02" />
             </div>
             <div class="col-02">
               <img src="images/pexels-mister-mister-3434523.jpg" alt="img-02" />
@@ -66,12 +81,20 @@
           <div class="banner">
             <h2>LOREM IPSUM</h2>
             <p class="para">LOREM IPSUM SET ADEMIR</p>
-            <div>
-              <p>Click <img src="images/icons8-arrow-30.png" alt="arrow" /></p>
-            </div>
+            <p>Click <img src="images/icons8-arrow-30.png" alt="arrow" /></p>
           </div>
         </div>
       </section>
     </main>
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function hideSidebar(){
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+      }
+    </script>
   </body>
 </html>
